@@ -226,7 +226,11 @@ $(pytarballs): $(tdir)/%:
 # certain programs (like Python itself), or libraries for the modules.
 $(ibidir)/libffi: $(tdir)/libffi-$(libffi-version).tar.gz
 	$(call gbuild, $<, libffi-$(libffi-version)) \
-	echo "Libffi $(libffi-version)" > $@
+	&& if [ -f $(idir)/lib64/libffi.a ]; then \
+	      cp $(idir)/lib64/libffi* $(ildir)/; \
+	   fi \
+	&& echo "Libffi $(libffi-version)" > $@
+
 
 $(ibidir)/python: $(tdir)/python-$(python-version).tar.gz \
                   $(ibidir)/libffi

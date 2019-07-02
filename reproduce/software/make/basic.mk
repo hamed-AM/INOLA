@@ -775,6 +775,7 @@ $(ibidir)/wget: $(tdir)/wget-$(wget-version).tar.lz \
 	$(call gbuild, $<, wget-$(wget-version), , \
 	               LIBS="$$LIBS $$libs" \
 	               --with-libssl-prefix=$(idir) \
+	               --without-libiconv-prefix \
 	               --with-ssl=openssl \
 	               --with-openssl=yes \
 	               --without-metalink \
