@@ -171,7 +171,7 @@ $(tarballs): $(tdir)/%: | $(lockdir)
 	    majorver=$$(echo $(hdf5-version) | sed -e 's/\./ /g' | awk '{printf("%d.%d", $$1, $$2)}')
 	    w=https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-$$majorver/hdf5-$(hdf5-version)/src/$*
 	  elif [ $$n = ghostscript ]; then w=https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs926
-	  elif [ $$n = gnuastro    ]; then w=http://ftp.gnu.org/gnu/gnuastro
+	  elif [ $$n = gnuastro    ]; then w=http://akhlaghi.org/src
 	  elif [ $$n = gsl         ]; then w=http://ftp.gnu.org/gnu/gsl
 	  elif [ $$n = imagemagick ]; then
 	    mergenames=0

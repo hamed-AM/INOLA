@@ -36,7 +36,7 @@
 
 
 # Programs and libraries.
-top-level-programs  = gnuastro
+top-level-programs  = astrometrynet gnuastro
 
 # Python libraries/modules.
-top-level-python    = astropy
+top-level-python    = astroquery astropy
