@@ -114,9 +114,10 @@ makesrc = initialize \
           download \
           biascorrect \
           flat-creat \
+          flat-devide \
+          build-catalogue-indexes \
+          build-astrometry \
           paper
-
-
 
 
 
