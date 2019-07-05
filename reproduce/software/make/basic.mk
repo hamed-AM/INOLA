@@ -770,6 +770,9 @@ $(ibidir)/wget: $(tdir)/wget-$(wget-version).tar.lz \
                 $(ibidir)/pkg-config \
                 $(ibidir)/coreutils \
                 $(ibidir)/openssl # Coreutils only so Wget is built after it.
+
+        # We need to explicitly disable `libiconv', because of the
+        # `pkg-config' and `libiconv' problem.
 	libs="-pthread"; \
 	if [ x$(needs_ldl) = xyes ]; then libs="$$libs -ldl"; fi; \
 	$(call gbuild, $<, wget-$(wget-version), , \
