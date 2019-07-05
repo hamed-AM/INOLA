@@ -8,6 +8,6 @@ run the following:
 
 git rev-parse --is-inside-work-tree
 
-it returns true if you are.
+it returns true if it contains.
 ##############################
 
