@@ -1,0 +1,13 @@
+My git user name and password:
+hamed-AM
+astro123nomy
+##############################
+
+To see if your current working directory contains a git repository
+run the following:
+
+git rev-parse --is-inside-work-tree
+
+it returns true if you are.
+##############################
+
